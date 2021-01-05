@@ -31,17 +31,7 @@ const useScrollInfo = (onScrollCallback) => {
           ? Direction.RIGHT
           : Direction.LEFT;
     }
-
-    console.log("useScrollInfo contentOffset contentSize", {
-      contentOffset: event?.nativeEvent?.contentOffset,
-      contentSize: event?.nativeEvent?.contentSize,
-      layoutMeasurement: event?.nativeEvent?.layoutMeasurement,
-      verticalDirection,
-      horizontalDirection,
-      currContentOffsetY,
-      currContentOffsetX,
-    });
-
+    
     setPrevContentOffsetY(currContentOffsetY);
     setPrevContentOffsetX(currContentOffsetX);
     onScrollCallback(event, { verticalDirection, horizontalDirection });
